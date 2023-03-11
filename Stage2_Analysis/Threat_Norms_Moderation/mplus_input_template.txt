@@ -25,10 +25,7 @@ MODEL:
 	V__VOXEL__ ON norms (b2); ! Y ON W
 	V__VOXEL__ ON adinorm (b3); ! Y ON XW
 	
-	adi ON age sex race scan;
-	norms ON age sex race scan;
-	V__VOXEL__ ON age sex race scan;
-	adinorm ON age sex race scan;
+	adi norms adinorm age sex race scan;
 
 MODEL CONSTRAINT:
 
