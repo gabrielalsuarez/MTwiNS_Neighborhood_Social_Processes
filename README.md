@@ -24,22 +24,22 @@ The Stage 2 folder includes a shell script to run Neuropointillist and an R scri
 
 The Stage 2 folder also includes 10 folders that contain the required code and files for each individual analysis.
 
- 1. *Neutral_ADI*: neighborhood disadvantage predicting amygdala reactivity to ambiguity (neutral > shapes)
- 2. *Neutral_CollectiveEfficacy*: collective efficacy predicting amygdala reactivity to neutral faces (neutral > shapes)
- 3. *Neutral_CollectiveEfficacy_Moderation*: interaction between neighborhood disadvantage and collective efficacy predicting amygdala reactivity to ambiguity (neutral > shapes)
- 4. *Neutral_Norms*: norms predicting amygdala reactivity to ambiguity (neutral > shapes)
- 5. *Neutral_Norms_Moderation*: interaction between neighborhood disadvantage & norms predicting amygdala reactivity to ambiguity (neutral > shapes)
- 6. *Threat_ADI*: neighborhood disadvantage predicting amygdala reactivity to threat (fearful + angry faces > shapes)
- 7. *Threat_CollectiveEfficacy*: collective efficacy predicting amygdala reactivity to threat (fearful + angry faces > shapes)
- 8. *Threat_CollectiveEfficacy_Moderation*: interaction between neighborhood disadvantage and collective efficacy predicting amygdala reactivity to threat (fearful + angry faces > shapes)
- 9. *Threat_Norms*: norms predicting amygdala reactivity to threat (fearful + angry faces > shapes)
- 10. *Threat_Norms_moderation*: interaction between neighborhood disadvantage and norms predicting amygdala reactivity to threat (fearful + angry faces > shapes)
+ 1. *Neutral_ADI*: Neighborhood disadvantage predicting amygdala reactivity to ambiguity (neutral > shapes)
+ 2. *Neutral_CollectiveEfficacy*: Collective efficacy predicting amygdala reactivity to ambiguity (neutral > shapes)
+ 3. *Neutral_CollectiveEfficacy_Moderation*: The interaction between neighborhood disadvantage and collective efficacy predicting amygdala reactivity to ambiguity (neutral > shapes)
+ 4. *Neutral_Norms*: Neighborhood norms predicting amygdala reactivity to ambiguity (neutral > shapes)
+ 5. *Neutral_Norms_Moderation*: The interaction between neighborhood disadvantage & norms predicting amygdala reactivity to ambiguity (neutral > shapes)
+ 6. *Threat_ADI*: Neighborhood disadvantage predicting amygdala reactivity to threat (fearful + angry faces > shapes)
+ 7. *Threat_CollectiveEfficacy*: Collective efficacy predicting amygdala reactivity to threat (fearful + angry faces > shapes)
+ 8. *Threat_CollectiveEfficacy_Moderation*: The interaction between neighborhood disadvantage and collective efficacy predicting amygdala reactivity to threat (fearful + angry faces > shapes)
+ 9. *Threat_Norms*: Neighborhood norms predicting amygdala reactivity to threat (fearful + angry faces > shapes)
+ 10. *Threat_Norms_moderation*: The interaction between neighborhood disadvantage and norms predicting amygdala reactivity to threat (fearful + angry faces > shapes)
 
 Each folder contains the 5 following files:
 
  - *A contrast TXT file*: **con_0015.txt** or **con_0009.txt** 
-    - This text file contains the file path pointing to the contrast image for each subject included in the analysis; con_0009.txt is for the contrast angry + fearful faces > shapes (threat) and con_0015.txt is for the contrast neutral > shapes.
- - `mplus_input_template.txt`*: **Mplus Input File** 
+    - This text file contains the file path pointing to the contrast image for each subject included in the analysis; con_0009.txt is for the contrast fearful + angry faces > shapes (threat) and con_0015.txt is for the contrast neutral > shapes.
+ - `mplus_input_template.txt`*: **Mplus Input Template File** 
     - This text file contain the Mplus code to run the statistical model. Mplus Automation takes this template file and creates an input file for each voxel in the amygdala (468 voxels/input files).
  - `mplus_model.R`: 
     - This script defines the `processVoxel(v)` function that takes as an argument a voxel number, `v`. The code also returns a `list` structure that contains the values that you want to write out as files.
