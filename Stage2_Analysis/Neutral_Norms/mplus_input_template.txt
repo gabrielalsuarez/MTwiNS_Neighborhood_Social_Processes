@@ -1,0 +1,22 @@
+TITLE: Aim2_NORMS_con0015
+DATA:
+        File = "../voxeldata.csv";
+
+VARIABLE:
+        Names = twinid famid scan adi coleff soccoh infsocn norms
+	age sex race income pceduc peqcttr V1-V468;
+        Missing = all (-99);
+        Usevar = famid norms age sex race scan V__VOXEL__;
+        Cluster = famid;
+
+ANALYSIS:
+        Type = Complex;
+        Estimator = ML;
+	Bootstrap = 5000;
+
+MODEL:
+        V__VOXEL__ ON norms age sex race scan;
+	norms ON age sex race scan;
+
+OUTPUT: 
+        sampstat cinterval standardized;
