@@ -12,7 +12,7 @@ This project is comprised of two stages: Stage 1 (Registered Report) and Stage 2
 
 The Stage 1 folder contains two files: 
 
-- Manuscript: This is the initial version of the manuscript that covers the Abstract, Introduction, Methods, and Experimental Design and Statistical Approach, which received an in-principle acceptance at Developmental Cognitive Neuroscience in 2021.
+- Manuscript: (*DCN-D-20-00147-Stage-1-IPA.pdf*) This is the initial version of the manuscript that covers the Abstract, Introduction, Methods, and Experimental Design and Statistical Approach, which received an in-principle acceptance at Developmental Cognitive Neuroscience in 2021.
 - Code: This is the R Markdown code (and .html output) used to compute descriptive statistics and figures for the Methods section of the manuscript
 
 # **Stage 2 Analysis**
