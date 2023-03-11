@@ -1,0 +1,52 @@
+TITLE: Aim3_Moderation_CE_con0015
+DATA:
+        File = "../voxeldata.csv";
+
+VARIABLE:
+        Names = twinid famid scan adi coleff soccoh infsocn norms
+	age sex race income pceduc peqcttr V1-V468;
+
+        Usevar = famid adi coleff age sex race scan V__VOXEL__ adice;
+	
+	Missing = all (-99);        
+	
+	Cluster = famid;
+
+DEFINE:
+	CENTER adi coleff V__VOXEL__ (GRANDMEAN);
+	adice = adi*coleff; !x*w
+
+ANALYSIS:
+        Type = Complex;
+        Estimator = MLR;
+
+MODEL:
+	V__VOXEL__ ON adi (b1); !Y ON X
+	V__VOXEL__ ON coleff (b2); ! Y ON W
+	V__VOXEL__ ON adice (b3); ! Y ON XW
+	
+	adi ON age sex race scan;
+	coleff ON age sex race scan;
+	V__VOXEL__ ON age sex race scan;
+	adice ON age sex race scan;
+
+MODEL CONSTRAINT:
+
+	! Use model constraint subcommand to test simple slopes
+	! Pick low, med, and high moderator values
+	! e.g., 1 SD above mean, mean, and 1 SD below mean
+
+	NEW(Low_CE Med_CE High_CE Simp_Lo Simp_Med Simp_Hi);
+	
+	Low_CE = -0.84;
+	Med_CE = 0;
+	High_CE = 0.84;
+
+	! Calc simple slopes for each value of CE
+
+	Simp_Lo = b1 + b3*Low_CE;
+	Simp_Med = b1 + b3*Med_CE;
+	Simp_Hi = b1 + b3*High_CE;
+
+OUTPUT: 
+        sampstat cinterval standardized;
