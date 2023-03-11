@@ -16,7 +16,7 @@ ANALYSIS:
 
 MODEL:
         V__VOXEL__ ON adi age sex race scan;
-	adi ON age sex race scan;
+	adi age sex race scan;
 
 OUTPUT: 
         sampstat cinterval standardized;
