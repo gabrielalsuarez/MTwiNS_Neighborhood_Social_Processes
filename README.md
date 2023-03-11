@@ -1,7 +1,6 @@
 # **MTwiNS_Neighborhood_Social_Processes**
 
-## *The Impact of Neighborhood Disadvantage on Amygdala Reactivity:* 
-## *Pathways Through Neighborhood Social Processes*
+## *The Impact of Neighborhood Disadvantage on Amygdala Reactivity: Pathways Through Neighborhood Social Processes*
 
 The content here is for Suarez et al. (2022) that is included in this folder. The project examined associations between neighborhood disadvantage (measured using the Area Deprivation Index; ADI), neighborhood social processes (i.e., collective efficacy and norms) and amygdala reactivity to socioemotional faces of threat and ambiguity. To address the study aims multiple regression models were estimated using Neuropointillist (Madhyastha et al., 2018; http://ibic.github.io/neuropointillist/) in conjunction with the Mplus Automation package in R (Hallquist & Wiley, 2018). 
 
@@ -31,16 +30,16 @@ The Stage 2 folder includes a shell script to run Neuropointillist and an R scri
 
 The Stage 2 folder also includes 10 folders that contain the required code and files for each individual analysis.
 
- 1. neutral_adi: neighborhood disadvantage predicting amygdala reactivity to ambiguity (neutral > shapes)
- 2. neutral_colleff: collective efficacy predicting amygdala reactivity to neutral faces (neutral > shapes)
- 3. neutral_colleff_moderation: interaction between neighborhood disadvantage and collective efficacy predicting amygdala reactivity to ambiguity (neutral > shapes)
- 4. neutral_norms: norms predicting amygdala reactivity to ambiguity (neutral > shapes)
- 5. neutral_norms_moderation: interaction between neighborhood disadvantage & norms predicting amygdala reactivity to ambiguity (neutral > shapes)
- 6. threat_adi: neighborhood disadvantage predicting amygdala reactivity to threat (fearful + angry faces > shapes)
- 7. threat_colleff: collective efficacy predicting amygdala reactivity to threat (fearful + angry faces > shapes)
- 8. threat_colleff_moderation: interaction between neighborhood disadvantage and collective efficacy predicting amygdala reactivity to threat (fearful + angry faces > shapes)
- 9. threat_norms: norms predicting amygdala reactivity to threat (fearful + angry faces > shapes)
- 10. threat_norms_moderation: interaction between neighborhood disadvantage and norms predicting amygdala reactivity to threat (fearful + angry faces > shapes)
+ 1. *neutral_adi*: neighborhood disadvantage predicting amygdala reactivity to ambiguity (neutral > shapes)
+ 2. *neutral_colleff*: collective efficacy predicting amygdala reactivity to neutral faces (neutral > shapes)
+ 3. *neutral_colleff_moderation*: interaction between neighborhood disadvantage and collective efficacy predicting amygdala reactivity to ambiguity (neutral > shapes)
+ 4. *neutral_norms*: norms predicting amygdala reactivity to ambiguity (neutral > shapes)
+ 5. *neutral_norms_moderation*: interaction between neighborhood disadvantage & norms predicting amygdala reactivity to ambiguity (neutral > shapes)
+ 6. *threat_adi*: neighborhood disadvantage predicting amygdala reactivity to threat (fearful + angry faces > shapes)
+ 7. *threat_colleff*: collective efficacy predicting amygdala reactivity to threat (fearful + angry faces > shapes)
+ 8. *threat_colleff_moderation*: interaction between neighborhood disadvantage and collective efficacy predicting amygdala reactivity to threat (fearful + angry faces > shapes)
+ 9. *threat_norms*: norms predicting amygdala reactivity to threat (fearful + angry faces > shapes)
+ 10. *threat_norms_moderation*: interaction between neighborhood disadvantage and norms predicting amygdala reactivity to threat (fearful + angry faces > shapes)
 
 Each folder contains the 5 following files:
 
@@ -53,4 +52,4 @@ Each folder contains the 5 following files:
  - *rAAL_BiAAmy_PickAtlas.nii*: 
     - A bilateral amygdala region of interest (ROI) mask defined structurally using the AAL Atlas definition in the WFU PickAtlas Tool, version 1.04 (Maldjian et al., 2003) 
  - *readargs.R*: 
-    - This code sets a vector called cmdargs, which will be read to obtain the required arguments for the npoint function. 
+    - This code sets a vector called cmdargs, which will be read to obtain the required arguments for the `npoint` function. 
