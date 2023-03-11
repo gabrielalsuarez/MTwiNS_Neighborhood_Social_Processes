@@ -1,0 +1,21 @@
+TITLE: Aim2_ColEff_con0015
+DATA:
+        File = "../voxeldata.csv";
+
+VARIABLE:
+        Names = twinid famid scan adi coleff soccoh infsocn norms
+	age sex race income pceduc peqcttr V1-V468;
+        Missing = all (-99);
+        Usevar = famid coleff age sex race scan V__VOXEL__;
+        Cluster = famid;
+
+ANALYSIS:
+        Type = Complex;
+        Estimator = MLR;
+
+MODEL:
+        V__VOXEL__ ON coleff age sex race scan;
+	coleff ON age sex race scan;
+
+OUTPUT: 
+        sampstat cinterval standardized;
