@@ -1,4 +1,4 @@
-TITLE: Aim2_NORMS_con0009
+TITLE: Aim2_Norms_con0009
 DATA:
         File = "../voxeldata.csv";
 
