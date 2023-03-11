@@ -1,4 +1,4 @@
-TITLE: Aim2_ColEff_con0009
+TITLE: Aim2_CollEff_con0009
 DATA:
         File = "../voxeldata.csv";
 
