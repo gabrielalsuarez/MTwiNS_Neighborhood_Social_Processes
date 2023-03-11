@@ -1,0 +1,22 @@
+TITLE: Aim1_ADI_con0009
+DATA:
+        File = "../voxeldata.csv";
+
+VARIABLE:
+        Names = twinid famid scan adi coleff soccoh infsocn norms
+	age sex race income pceduc peqcttr V1-V468;
+        Missing = all (-99);
+        Usevar = famid adi age sex race scan V__VOXEL__;
+        Cluster = famid;
+
+ANALYSIS:
+        Type = Complex;
+        Estimator = ML;
+	Bootstrap = 5000;
+
+MODEL:
+        V__VOXEL__ ON adi age sex race scan;
+	adi ON age sex race scan;
+
+OUTPUT: 
+        sampstat cinterval standardized;
