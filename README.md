@@ -44,8 +44,13 @@ The Stage 2 folder also includes 10 folders that contain the required code and f
 
 Each folder contains the 5 following files:
 
- - *A contrast TXT file*: con_0015.txt or con_0009.txt; This text file contains the file path pointing to the contrast image for each subject included in the analysis; con_0009.txt is for the contrast angry + fearful faces > shapes (threat) and con_0015.txt is for the contrast neutral > shapes.
- - *Mplus Input Template*: mplus_input_template.txt; This text file contain the Mplus code to run the statistical model. Mplus Automation takes this template file and creates an input file for each voxel in the amygdala (468 voxels/input files).
- - *mplus_model.R*: This script defines the processVoxel(v) function that takes as an argument a voxel number, v. The code also returns a list structure that contains the values that you want to write out as files.
- - *rAAL_BiAAmy_PickAtlas.nii*: A bilateral amygdala region of interest (ROI) mask defined structurally using the AAL Atlas definition in the WFU PickAtlas Tool, version 1.04 (Maldjian et al., 2003) 
- - *readargs.R*: This code sets a vector called cmdargs, which will be read to obtain the required arguments for the npoint function. 
+ - *A contrast TXT file*: **con_0015.txt** or **con_0009.txt** 
+    - This text file contains the file path pointing to the contrast image for each subject included in the analysis; con_0009.txt is for the contrast angry + fearful faces > shapes (threat) and con_0015.txt is for the contrast neutral > shapes.
+ - *mplus_input_template.txt*: **Mplus Input File** 
+    - This text file contain the Mplus code to run the statistical model. Mplus Automation takes this template file and creates an input file for each voxel in the amygdala (468 voxels/input files).
+ - *mplus_model.R*: 
+    - This script defines the processVoxel(v) function that takes as an argument a voxel number, v. The code also returns a list structure that contains the values that you want to write out as files.
+ - *rAAL_BiAAmy_PickAtlas.nii*: 
+    - A bilateral amygdala region of interest (ROI) mask defined structurally using the AAL Atlas definition in the WFU PickAtlas Tool, version 1.04 (Maldjian et al., 2003) 
+ - *readargs.R*: 
+    - This code sets a vector called cmdargs, which will be read to obtain the required arguments for the npoint function. 
