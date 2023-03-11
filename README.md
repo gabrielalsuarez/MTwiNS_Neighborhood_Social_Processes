@@ -2,11 +2,11 @@
 
 ## *The Impact of Neighborhood Disadvantage on Amygdala Reactivity: Pathways Through Neighborhood Social Processes*
 
-The content here is for Suarez et al. (2022) that is included in this folder. The project examined associations between neighborhood disadvantage (measured using the Area Deprivation Index; ADI), neighborhood social processes (i.e., collective efficacy and norms) and amygdala reactivity to socioemotional faces of threat and ambiguity. To address the study aims multiple regression models were estimated using `Neuropointillist` (Madhyastha et al., 2018; http://ibic.github.io/neuropointillist/) in conjunction with the `Mplus Automation` package in R (Hallquist & Wiley, 2018). 
+The content here is for a manuscript by Suarez et al. (2022), which can be found at <<https://doi.org/10.1016/j.dcn.2022.101061>>. The project examined associations between neighborhood disadvantage (measured using the Area Deprivation Index; ADI), neighborhood social processes (i.e., collective efficacy and neighborhood norms) and amygdala reactivity to socioemotional faces of threat and ambiguity. To address the study aims multiple regression models were estimated using `Neuropointillist` (Madhyastha et al., 2018; <<http://ibic.github.io/neuropointillist/>>) in conjunction with the `Mplus Automation` package in R (Hallquist & Wiley, 2018). 
 
 This project is in collaboration with Professors, Dr. Luke Hyde, from the University of Michigan, Drs. S. Alexandra Burt and Kelly Klump, from Michigan State University, and Dr. Arianna Gard, from the University of Maryland along with Dr. David A. Clark from Michigan State University and Jared Burton from the University of Michigan.
 
-This project is comprised of two stages: Stage 1 (Registered Report) and Stage 2 (Analyses and Results). Stage 1 is preregistered on the Open Science Framework at: INSERT LINK HERE
+This project is comprised of two stages: Stage 1 (Registered Report) and Stage 2 (Analyses and Results). Stage 1 is preregistered on the Open Science Framework at: <<https://osf.io/kxpft>>
 
 # **Stage 1 Registered Report**
 
@@ -14,9 +14,6 @@ The Stage 1 folder contains two files:
 
 - Manuscript: This is the initial version of the manuscript that covers the Abstract, Introduction, Methods, and Experimental Design and Statistical Approach, which received an in-principle acceptance at Developmental Cognitive Neuroscience in 2021.
 - Code: This is the R Markdown code (and .html output) used to compute descriptive statistics and figures for the Methods section of the manuscript
-
-The associated Stage 1 Registered Report can be found at:
-<link to Open Science>
 
 # **Stage 2 Analyses & Results**
 
@@ -27,16 +24,16 @@ The Stage 2 folder includes a shell script to run Neuropointillist and an R scri
 
 The Stage 2 folder also includes 10 folders that contain the required code and files for each individual analysis.
 
- 1. *neutral_adi*: neighborhood disadvantage predicting amygdala reactivity to ambiguity (neutral > shapes)
- 2. *neutral_colleff*: collective efficacy predicting amygdala reactivity to neutral faces (neutral > shapes)
- 3. *neutral_colleff_moderation*: interaction between neighborhood disadvantage and collective efficacy predicting amygdala reactivity to ambiguity (neutral > shapes)
- 4. *neutral_norms*: norms predicting amygdala reactivity to ambiguity (neutral > shapes)
- 5. *neutral_norms_moderation*: interaction between neighborhood disadvantage & norms predicting amygdala reactivity to ambiguity (neutral > shapes)
- 6. *threat_adi*: neighborhood disadvantage predicting amygdala reactivity to threat (fearful + angry faces > shapes)
- 7. *threat_colleff*: collective efficacy predicting amygdala reactivity to threat (fearful + angry faces > shapes)
- 8. *threat_colleff_moderation*: interaction between neighborhood disadvantage and collective efficacy predicting amygdala reactivity to threat (fearful + angry faces > shapes)
- 9. *threat_norms*: norms predicting amygdala reactivity to threat (fearful + angry faces > shapes)
- 10. *threat_norms_moderation*: interaction between neighborhood disadvantage and norms predicting amygdala reactivity to threat (fearful + angry faces > shapes)
+ 1. *Neutral_ADI*: neighborhood disadvantage predicting amygdala reactivity to ambiguity (neutral > shapes)
+ 2. *Neutral_CollectiveEfficacy*: collective efficacy predicting amygdala reactivity to neutral faces (neutral > shapes)
+ 3. *Neutral_CollectiveEfficacy_Moderation*: interaction between neighborhood disadvantage and collective efficacy predicting amygdala reactivity to ambiguity (neutral > shapes)
+ 4. *Neutral_Norms*: norms predicting amygdala reactivity to ambiguity (neutral > shapes)
+ 5. *Neutral_Norms_Moderation*: interaction between neighborhood disadvantage & norms predicting amygdala reactivity to ambiguity (neutral > shapes)
+ 6. *Threat_ADI*: neighborhood disadvantage predicting amygdala reactivity to threat (fearful + angry faces > shapes)
+ 7. *Threat_CollectiveEfficacy*: collective efficacy predicting amygdala reactivity to threat (fearful + angry faces > shapes)
+ 8. *Threat_CollectiveEfficacy_Moderation*: interaction between neighborhood disadvantage and collective efficacy predicting amygdala reactivity to threat (fearful + angry faces > shapes)
+ 9. *Threat_Norms*: norms predicting amygdala reactivity to threat (fearful + angry faces > shapes)
+ 10. *Threat_Norms_moderation*: interaction between neighborhood disadvantage and norms predicting amygdala reactivity to threat (fearful + angry faces > shapes)
 
 Each folder contains the 5 following files:
 
