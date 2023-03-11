@@ -13,13 +13,13 @@ This project is comprised of two stages: Stage 1 (Registered Report) and Stage 2
 The Stage 1 folder contains two files: 
 
 - Manuscript: (*DCN-D-20-00147-Stage-1-IPA.pdf*) This is the initial version of the manuscript that covers the Abstract, Introduction, Methods, and Experimental Design and Statistical Approach, which received an in-principle acceptance at Developmental Cognitive Neuroscience in 2021.
-- Code: This is the R Markdown code (and .html output) used to compute descriptive statistics and figures for the Methods section of the manuscript
+- Code: (*mtwins_nsp_descriptives.Rmd*) This is the R Markdown code (and associated output, .pdf) used to compute descriptive statistics and figures for the Methods section of the Registered Report.
 
 # **Stage 2 Analysis**
 
 The Stage 2 folder includes a shell script to run Neuropointillist and an R script to write the output files.
 
- - `run_neuropoint.sh`: This shell script to run an instance of Neuropointillist. User must point the script to the specific data directory that contains the files needed to run Neuropointillist.
+ - `run_neuropoint.sh`: This shell script is used to run an instance of Neuropointillist. The user must point the script to the data directory that contains the files needed to run Neuropointillist.
  - `write_neuropoint_mplus_output.R`: This code writes the output from Neuropointillist into a ‘.nii.gz’ file.
 
 The Stage 2 folder also includes 10 folders that contain the required code and files for each individual analysis.
@@ -38,12 +38,20 @@ The Stage 2 folder also includes 10 folders that contain the required code and f
 Each folder contains the 5 following files:
 
  - *A contrast TXT file*: **con_0015.txt** or **con_0009.txt** 
-    - This text file contains the file path pointing to the contrast image for each subject included in the analysis; con_0009.txt is for the contrast fearful + angry faces > shapes (threat) and con_0015.txt is for the contrast neutral > shapes.
+    - This text file contains the file paths pointing to the contrast image for each subject included in the analysis; con_0009.txt is for the contrast *fearful + angry faces > shapes* (threat) and con_0015.txt is for the contrast *neutral > shapes* (ambiguity).
  - `mplus_input_template.txt`*: **Mplus Input Template File** 
     - This text file contain the Mplus code to run the statistical model. Mplus Automation takes this template file and creates an input file for each voxel in the amygdala (468 voxels/input files).
  - `mplus_model.R`: 
-    - This script defines the `processVoxel(v)` function that takes as an argument a voxel number, `v`. The code also returns a `list` structure that contains the values that you want to write out as files.
+    - This script defines the `processVoxel(v)` function that takes as an argument a voxel number, `v`. The code also returns a `list` structure that contains the values that you want to write out as '.nii.gz' files.
  - `rAAL_BiAAmy_PickAtlas.nii`: 
     - A bilateral amygdala region of interest (ROI) mask defined structurally using the AAL Atlas definition in the WFU PickAtlas Tool, version 1.04 (Maldjian et al., 2003) 
  - `readargs.R`: 
-    - This code sets a vector called `cmdargs`, which will be read to obtain the required arguments for the `npoint` function. 
+    - This code sets a vector called `cmdargs`, which will be read to obtain the required arguments for the `npoint` function.
+    - `cmdargs` requires the following arguments
+       - --m: Brain mask (e.g., rAAL_BiAAmy_PictAtlas.nii) 
+       - --set 1: A text file that contains the filenames in each set, one per row
+       - --setlabels1: The setlabel files are csv files that specify variables that correspond to the files in the sets provided above. There must be exactly the same number of setlabel files as sets.
+       - --model: The model specifies the R template code to run the model and return results. The model must define the function processVoxel(v) that takes as an argument a voxel number v.
+       - --output: Specify an output prefix that is prepended to output files
+       - --debug: Write out external representations of the design matrix, the fMRI data, and a function called `imagecoordtovertex`, which maps three-dimensional image coordinates (e.g. from fslview) into a vertex number, to the file `debugfile`.
+       - --p: specifies that multicore parallelism will be implemented using `x` processors
