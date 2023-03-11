@@ -25,10 +25,7 @@ MODEL:
 	V__VOXEL__ ON coleff (b2); ! Y ON W
 	V__VOXEL__ ON adice (b3); ! Y ON XW
 	
-	adi ON age sex race scan;
-	coleff ON age sex race scan;
-	V__VOXEL__ ON age sex race scan;
-	adice ON age sex race scan;
+	adi coleff adice age sex race scan;
 
 MODEL CONSTRAINT:
 
