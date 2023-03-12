@@ -2,7 +2,7 @@
 
 ## *The Impact of Neighborhood Disadvantage on Amygdala Reactivity: Pathways Through Neighborhood Social Processes*
 
-The content here is for a manuscript by Suarez et al. (2022), which can be found at <https://doi.org/10.1016/j.dcn.2022.101061>. The project examined associations between neighborhood disadvantage (measured using the Area Deprivation Index; ADI), neighborhood social processes (i.e., collective efficacy and neighborhood norms) and amygdala reactivity to socioemotional faces of threat and ambiguity. To address the study aims, multiple regression models were estimated using `Neuropointillist` (Madhyastha et al., 2018; <http://ibic.github.io/neuropointillist/>) in conjunction with the `Mplus Automation` package in R (Hallquist & Wiley, 2018). 
+This content is for a manuscript by Suarez et al. (2022), which can be found at <https://doi.org/10.1016/j.dcn.2022.101061>. The project examined associations between neighborhood disadvantage (measured using the Area Deprivation Index; ADI), neighborhood social processes (i.e., collective efficacy and neighborhood norms) and amygdala reactivity to socioemotional faces of threat and ambiguity. To address the study aims, multiple regression models were estimated using `Neuropointillist` (Madhyastha et al., 2018; <http://ibic.github.io/neuropointillist/>) in conjunction with the `Mplus Automation` package in R (Hallquist & Wiley, 2018). 
 
 This project is in collaboration with Professors, Dr. Luke Hyde, from the University of Michigan, Drs. S. Alexandra Burt and Kelly Klump, from Michigan State University, and Dr. Arianna Gard, from the University of Maryland along with Dr. David A. Clark from Michigan State University and Jared Burton from the University of Michigan.
 
